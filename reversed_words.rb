@@ -1,0 +1,11 @@
+# Complete the solution so that it reverses all of the words within the string passed in.
+
+# Example:
+
+# "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+def solution(sentence)
+  sen_arr = sentence.split
+  new_arr = sen_arr.reverse
+  new_sen = new_arr.join(' ')
+end
