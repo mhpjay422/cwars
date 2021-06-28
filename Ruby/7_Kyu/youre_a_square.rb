@@ -28,3 +28,8 @@ def is_square(x)
   
   return false
 end
+
+def is_square(x)
+  x < 0 ? false : Math.sqrt(x) % 1 == 0
+  # modulo 1 to make sure its a whole number
+end
