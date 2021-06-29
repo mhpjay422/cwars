@@ -25,3 +25,7 @@ def get_sum(a,b)
   
   result + max
 end
+
+def get_sum(a,b)
+  return a < b ? (a..b).reduce(:+) : (b..a).reduce(:+) 
+end
