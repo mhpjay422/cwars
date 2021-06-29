@@ -19,3 +19,7 @@ def DNA_strand(dna)
   }
   dna.chars.map {|letter| compliments[letter] }.join
 end
+
+def DNA_strand(dna)
+  dna.tr("ACTG", "TGAC")
+end
