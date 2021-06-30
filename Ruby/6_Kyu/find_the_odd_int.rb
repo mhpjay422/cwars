@@ -13,3 +13,9 @@ def find_it(seq)
     return ele if count.odd? && next_ele_not_same
   end
 end
+
+def find_it(seq)
+  seq.detect { |n| seq.count(n).odd? }
+end
+
+# detect returns first that is not false
