@@ -16,3 +16,7 @@ def digital_root(n)
   new_num = n_arr[1..-1].join.to_i
   digital_root(num + digital_root(new_num))
 end
+
+def digital_root(n)
+  n < 10 ? n : digital_root(n.digits.sum)
+end
