@@ -6,10 +6,6 @@
 
 def pig_it text
   text.split(" ").map { |word| 
-    if word == "!" || word == "?"
-      word
-    else 
-      word[1..-1] + word[0] + "ay"
-    end  
+    word == "!" || word == "?" ? word : word[1..-1] + word[0] + "ay"
   }.join(" ")
 end
