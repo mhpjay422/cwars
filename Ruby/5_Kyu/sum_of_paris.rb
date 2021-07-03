@@ -47,3 +47,24 @@ def sum_pairs(ints, s)
   
     results.length == 0 ? nil : results.first
 end
+
+def sum_pairs(ints, s)
+    results = nil
+    low_index = 0
+    i = 0
+    pass_i = 0
+  
+    ints.reverse[i..-1].each do |num|
+      better_i = i + pass_i >= low_index
+      
+      if ints.reverse[i + 1..-1].include?(s - num) && better_i
+        results = [num, s - num]
+        low_index = i
+      end
+      
+      pass_i += 1
+      i += 1
+    end
+
+    results == nil ? nil : [results[1], results[0]]
+end
