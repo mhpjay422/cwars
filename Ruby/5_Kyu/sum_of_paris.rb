@@ -52,14 +52,17 @@ def sum_pairs(ints, s)
     results = nil
     low_index = 0
     i = 0
+    j = ints.length - 1
     pass_i = 0
   
-    ints.reverse[i..-1].each do |num|
+    ints.reverse[i..j].each do |num|
       better_i = i + pass_i >= low_index
+      arr_include_target = ints.reverse[i + 1..j].include?(s - num)
       
-      if ints.reverse[i + 1..-1].include?(s - num) && better_i
+      if arr_include_target && better_i
         results = [num, s - num]
         low_index = i
+        j = ints.index(s-num) + ints.length - 1
       end
       
       pass_i += 1
