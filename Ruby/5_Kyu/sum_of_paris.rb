@@ -71,3 +71,12 @@ def sum_pairs(ints, s)
 
     results == nil ? nil : [results[1], results[0]]
 end
+
+def sum_pairs(ints, s)
+  seen = {}
+  for i in ints do
+    return [s-i, i] if seen[s-i]
+    seen[i] = true
+  end
+  nil
+end
