@@ -27,9 +27,9 @@ def order_weight(strng)
       [num,total]
     }
   
-    sort_num = convert_arr.sort_by{ |ele| ele[0] }
+    sortby_num = convert_arr.sort_by{ |ele| ele[0] }
   
-    sort_convert = sort_num.sort_by{ |ele| ele[1] }
+    then_sortby_converted = sortby_num.sort_by{ |ele| ele[1] }
   
-    sort_convert.map(&:first).join(" ")
+    then_sortby_converted.map(&:first).join(" ")
 end
