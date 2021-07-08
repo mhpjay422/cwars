@@ -24,7 +24,7 @@ def who_is_next(names, r)
   end
   
   count_name = 1
-  until next_cycle / 5 * count_name + current >= r
+  until next_cycle / names.length * count_name + current >= r
     count_name += 1
   end
 
