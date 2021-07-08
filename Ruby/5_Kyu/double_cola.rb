@@ -16,7 +16,7 @@
 # whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951) == "Leonard"
 
 def who_is_next(names, r)
-  next_cycle = 5 
+  next_cycle = names.length 
   current = 0
   until current + next_cycle >= r
     current += next_cycle
