@@ -16,3 +16,9 @@ def domain_name(url)
   
   url[0..url.index(".") - 1]
 end
+
+def domain_name(url)
+  URI.parse(url).host.split('.').last(2)[0]
+end
+
+# Use URI.parse to separate out domain name
