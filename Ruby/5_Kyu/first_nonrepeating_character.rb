@@ -7,11 +7,14 @@
 # If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
 
 def  first_non_repeating_letter(s) 
-  down_arr = s.downcase.chars
-  down_arr.each.with_index { |letter, i| 
-    if down_arr.count(letter) == 1
-      return s.chars[i]
-    end
+  s.downcase.chars.each.with_index { |letter, i| 
+
+    return s.chars[i] if s.downcase.chars.count(letter) == 1 
   }
+
   return ""
+end
+
+def  first_non_repeating_letter(s) 
+  s.chars.find {|i| s.downcase.count(i)==1 || s.upcase.count(i)==1} || ""
 end
