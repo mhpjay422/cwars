@@ -55,3 +55,14 @@ def is_prime?(num)
   end
   true
 end
+
+
+require 'prime'
+
+def gap(gap, low, high)
+  primes_between(low,high).each_cons(2).find { |(a,b)| b-a == gap }
+end
+
+def primes_between(low,high)
+  Prime.each(high).select { |prime| prime >= low }
+end
