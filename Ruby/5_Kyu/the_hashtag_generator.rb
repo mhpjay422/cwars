@@ -22,3 +22,8 @@ def generateHashtag(str)
   return "#" + str.split(" ").map {|word| word.capitalize}.join
   
 end
+
+def generateHashtag(str)
+  str = "#" << str.split.map(&:capitalize).join
+  str.size <= 140 && str.size > 1 ? str : false
+end
